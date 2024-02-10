@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-16">
+    <main className="flex min-h-screen flex-col items-center space-around space-y-20 pt-2">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <div className="fixed bottom-0 right-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <Image
@@ -24,9 +24,9 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="flex flex-col space-y-32 relative flex place-items-center font-sans">
-        <p className="text-7xl text-center">
-          Develop in house Language <br /> Systems at <br /> lightning speed
+      <div className="flex flex-col space-y-8 place-items-center font-sans">
+        <p className="text-6xl text-center">
+          Develop in house <br /> language systems at <br /> lightning speed
         </p>
         <p className="text-center">
           Fully customized with your data to serve your customers at scale and
@@ -35,17 +35,27 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="flex flex-row justify-center border rounded">
-        <div className="flex items-center px-4 py-2 bg-white">
+      <div className="flex flex-row justify-center border rounded w-full max-w-3xl z-100">
+        <div className="flex items-center px-4 py-2 bg-white w-full">
           <input
             type="text"
             placeholder="query about us..."
-            className="flex-1 outline-none"
+            className="flex-1 outline-none text-black"
           />
         </div>
-        <button className="bg-black text-white px-4 py-2 rounded">
+        <button className="bg-black-800 text-white px-4 py-2 rounded w-32">
           Run query
         </button>
+      </div>
+      <div className="relative">
+        <Image
+          src="/screens.svg"
+          alt="zero one labs"
+          width={1500}
+          height={1500}
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
       </div>
     </main>
   );
